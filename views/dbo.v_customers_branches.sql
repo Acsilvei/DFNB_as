@@ -1,6 +1,6 @@
 
 /*****************************************************************************************************************
-NAME:    dbo.v_customers_branches
+NAME:    dbo.v_t_cust_dim_t_branch_dim
 PURPOSE: Create the dbo.v_custsincedate_acctopendate view
 
 MODIFICATION LOG:
@@ -13,14 +13,14 @@ RUNTIME:
 0 min
 
 NOTES:
-This view shows lists the customers and their primary branch.
+This view shows lists the t_cust_dim and their primary branch.
 
 ******************************************************************************************************************/
-CREATE VIEW dbo.v_customers_branch AS
+CREATE VIEW dbo.v_t_cust_dim_branch AS
 SELECT cust_id
      , pri_branch_id
      , cust_since_date
      , branch_name
-  FROM DFNB2.dbo.Customers AS c
+  FROM DFNB2.dbo.t_cust_dim AS c
        INNER JOIN
-       dbo.Branches AS b ON b.branch_id = c.pri_branch_id;
+       dbo.t_branch_dim AS b ON b.branch_id = c.pri_branch_id;

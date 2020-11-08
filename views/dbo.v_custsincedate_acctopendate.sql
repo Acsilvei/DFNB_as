@@ -13,7 +13,7 @@ RUNTIME:
 0 min
 
 NOTES:
-This view shows the initial relationship between customers and DFNB and the open dates for their accounts.
+This view shows the initial relationship between t_cust_dim and DFNB and the open dates for their t_acct_dim.
 
 ******************************************************************************************************************/
 
@@ -23,15 +23,15 @@ SELECT c.cust_id
      , c.cust_since_date
      , ac.acct_id
      , ac.open_date
-  FROM dbo.Customers AS c
+  FROM dbo.t_cust_dim AS c
        INNER JOIN
-       dbo.Accounts AS ac ON c.cust_id = ac.pri_cust_id
+       dbo.t_acct_dim AS ac ON c.cust_id = ac.pri_cust_id
  GROUP BY c.cust_id
         , c.cust_since_date
         , ac.acct_id
         , ac.open_date;
 
-SELECT *  FROM dbo.Accounts c
+SELECT *  FROM dbo.t_acct_dim c
 
 GO
 

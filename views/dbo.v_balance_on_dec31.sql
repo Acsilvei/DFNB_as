@@ -19,7 +19,7 @@ CREATE VIEW dbo.v_balance_on_dec31 AS
 SELECT acct_id
      , as_of_date --AS [Varchar(50)])
      , cur_bal
-  FROM DFNB2.dbo.AccountsFact
+  FROM DFNB2.dbo.t_acct_fact
  WHERE month(as_of_date) = 12
  GROUP BY acct_id
         , as_of_date
