@@ -147,7 +147,7 @@ SELECT DISTINCT
   FROM dbo.stg_p1 AS stg
  ORDER BY branch_id;
 
- -- 6) Create the Customers_t_acct_dim_role table
+ -- 6) Create the t_acct_dim_role table
 
 CREATE TABLE dbo.t_cust_acct_role_dim
 (acct_cust_role_id INT NOT NULL
@@ -225,8 +225,7 @@ SELECT DISTINCT
      , cust_id
      , acct_cust_role_id
   FROM dbo.stg_p1 AS stg
- ORDER BY acct_id
-        , cust_id;
+ ORDER BY acct_id;
 
  
   -- 9) Create the dbo.t_cust_branch_dim table
