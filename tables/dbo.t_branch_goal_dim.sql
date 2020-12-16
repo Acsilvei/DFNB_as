@@ -34,3 +34,83 @@ CREATE TABLE t_branch_goal_dim
 )
 ON [PRIMARY];
 GO
+
+--TRUNCATE TABLE dbo.t_branch_goal_dim
+
+--INSERT INTO dbo.t_branch_goal_dim(branch_id
+                                , branch_name
+                                , goal_year
+                                , goal_amount)
+--VALUES
+      (
+       '1'
+     , 'Washington'
+     , '2020'
+     , '203223915'
+      ),
+         (
+       '2'
+     , 'Springfield'
+     , '2020'
+     , '214487074'
+         ),
+            (
+       '3'
+     , 'Franklin'
+     , '2020'
+     , '205736833'
+            ),
+               (
+       '4'
+     , 'Greenville'
+     , '2020'
+     , '220279032'
+               ),
+                  (
+       '5'
+     , 'Bristol'
+     , '2020'
+     , '178327860'
+                  ),
+                     (
+       '6'
+     , 'Clinton'
+     , '2020'
+     , '200138632'
+                     ),
+                        (
+       '7'
+     , 'Fairview'
+     , '2020'
+     , '211557459'
+                        ),
+                           (
+       '8'
+     , 'Salem'
+     , '2020'
+     , '218661585'
+                           ),
+                              (
+       '9'
+     , 'Madison'
+     , '2020'
+     , '202300965'
+                              ),
+                                 (
+       '10'
+     , 'Georgetown'
+     , '2020'
+     , '211746859'
+                                 ),
+                                    (
+       '11'
+     , 'Riverside'
+     , '2020'
+     , '217177829'
+                                    ),
+                                       (
+       '12'
+     , 'Kingston'
+     , '2020'
+     , '234267796'
+                                       );
